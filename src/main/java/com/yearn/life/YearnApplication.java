@@ -1,0 +1,14 @@
+package com.yearn.life;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
+
+@EnableCaching
+@SpringBootApplication
+public class YearnApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(YearnApplication.class, args);
+	}
+}
