@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>导入excel</title>
+
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="导入excel">
+    <script type="text/javascript" th:src="@{/static/view/js/jquery-1.8.2.js}"></script>
+    <script type="text/javascript" th:src="@{/static/view/js/test.js}"></script>
+</head>
+
+<body>
+<form enctype="multipart/form-data" id="batchUpload"  action="/import" method="post" class="form-horizontal">
+    <button class="btn btn-success btn-xs" id="uploadEventBtn" style="height:26px;"  type="button" >择文件</button>
+    <input type="file" name="file"  style="width:0px;height:0px;" id="uploadEventFile">
+    <input id="uploadEventPath"  disabled="disabled"  type="text" placeholder="请择excel表" style="border: 1px solid #e6e6e6; height: 26px;width: 200px;" />
+</form>
+<button type="button" class="btn btn-success btn-sm"  onclick="user.uploadBtn()" >上传</button>
+</body>
+</html>
