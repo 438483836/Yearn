@@ -10,6 +10,7 @@ import com.aliyuncs.profile.DefaultProfile;
 import com.aliyuncs.profile.IClientProfile;
 import com.google.common.collect.Maps;
 import com.yearn.life.utils.JSONUtils;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
@@ -20,13 +21,13 @@ import java.util.Map;
 @Service("smsService")
 public class AliSmsServiceImpl {
     //初始化ascClient需要的几个参数
-    //    @Value("${spring.alisms.product}")
+//    @Value("${spring.aliSms.product}")
     final String product = "Dysmsapi";//短信API产品名称（短信产品名固定，无需修改）
-    //    @Value("${spring.alisms.domain}")
+//    @Value("${spring.aliSms.domain}")
     final String domain = "dysmsapi.aliyuncs.com";//短信API产品域名（接口地址固定，无需修改）
-//    @Value("${spring.web.accessKeyId}")
+//    @Value("${spring.aliSms.accessKeyId}")
     final String accessKeyId = "";//替换成你的AK
-//    @Value("${spring.web.accessKeySecret}")
+//    @Value("${spring.aliSms.accessKeySecret}")
     final String accessKeySecret = "";//替换成你的accessKeySecret
 
     public Map<String, Object> sendSms(List<String> numberList, String signName, String templateCode, Map<String, String> templateMap){
